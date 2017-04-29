@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>--><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+<script nonce="" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+        if (encode) {
+            replace.reverse();
+        }
+        for (var i=0,str=this;i< replace.length;i+= 2) {
+             str=str.replace(new RegExp(replace[i],'g'),replace[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd';
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+        <title>ChatTo.Us英语学习网 </title>
+
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">
+<link rel="stylesheet" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile34eb15.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc34eb15.css">
+<![endif]-->
+
+    </head>
+    <body id="" class="zh_CN ">
+
+<div class="page_profile_info">
+    <div class="page_profile_info_inner">
+        <div class="profile_info_area">
+            <div class="profile_info_group">
+                <span class="radius_avatar profile_avatar">
+                                        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM5fXLH8KSoZrgLYWqctrEa5nraVsDicrPcXhyTzg5H55DA/0">
+                                    </span>
+                <div class="profile_info">
+                    <strong class="profile_nickname">
+                      ChatTo.Us英语学习网
+                    </strong>
+                                        <p class="profile_account">微信号: chattous</p>
+                                    </div>
+            </div>
+            <ul class="profile_desc">
+                <li>
+                    <label class="profile_desc_label" for="">功能介绍</label>
+                    <div class="profile_desc_value" title="不知不觉学英语，每天进步一点点~~ 传播英语，传播祝福">不知不觉学英语，每天进步一点点~~ 传播英语，传播祝福</div>
+                </li>
+                <li>
+                    <label class="profile_desc_label" for="">帐号主体</label>
+                    <div class="profile_desc_value"></div>
+                </li>
+            </ul>
+
+            <div class="profile_opr"  style="display:none">
+                            <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制微信号</a>
+                        </div>
+
+        </div>
+        <div class="weui_category_title">最近10条群发</div>
+        <div class="weui_msg_card_list" id="history">
+
+        </div>
+        <div class="msg_card_tips">仅显示最近10条群发</div>
+
+        <div class="loadmore" style="display:none;" id="js_loading">
+            <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
+        </div>
+        <div class="loadmore with_line" style="display:none;" id="js_nomore">
+            <div class="tips_wrp"><span class="tips">已无更多</span></div>
+        </div>
+    </div>
+    <div id="js_pc_qr_code" class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qr_code_pc">
+                <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="/rr?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=tWi-2ZUbLWg6C-UoUToz0dd9GWvWcty4FDQ3iDGlx0VmVIQ4BywvytzlgPLwgEkiP5SWpKew5SAq0ER1DyNX3RJ98NaQxec9W7Q5vYumBuU=">
+                <p>微信扫一扫<br>关注该公众号</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <script nonce="">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="">
+(function() {
+	function _addVConsole(uri) {
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		document.write('<script nonce="" type="text/javascript" src="' + url + '"><\/script>');
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		_addVConsole('2.5.1/vconsole.min.js');
+		_addVConsole('plugin/vconsole-elements/1.0.2/vconsole-elements.min.js');
+		_addVConsole('plugin/vconsole-sources/1.0.1/vconsole-sources.min.js');
+		_addVConsole('plugin/vconsole-resources/1.0.0/vconsole-resources.min.js');
+		_addVConsole('plugin/vconsole-mpopt/1.0.0/vconsole-mpopt.js');
+	}
+})();
+</script>
+
+        <script>window.__moon_host = 'res.wx.qq.com';window.moon_map = {"biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes3518c6.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse3518c6.js","biz_common/template-2.0.1-cmd.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/template-2.0.1-cmd3518c6.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core34c264.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class3518c6.js","biz_common/utils/string/emoji.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/emoji3518c6.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax34c264.js","history/profile_history.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history.html34eb15.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html3518c6.js","history/template_helper.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/template_helper24f185.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib34ce9e.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event3518c6.js","history/profile_history.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history355c4d.js","sougou/profile.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile31dd7f.js"};</script><script type="text/javascript">window.__wxgspeeds={}; window.__wxgspeeds.moonloadtime=+new Date()</script><script  type="text/javascript" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/moon352e30.js"></script>
+<script type="text/javascript">
+    document.domain="qq.com";
+    var biz = "MjM5NzAyNzEyMA==" || "";
+    var src = "3" ;
+    var ver = "1" ;
+    var timestamp = "1493476399" ;
+    var signature = "gQm97uNV*hlaACR891-afCz*t9IULHXSajnhPMfa8jpT1Sk3Kuxev6euNCPq3hiOD5JJmRJ-ouXU3yfTdIHwQA==" ;
+    var name="chattous"||"ChatTo.Us英语学习网";
+        var msgList = {"list":[{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmAz18LlPLFPmp62PUSlTch2eehh9NS*KnDxRkuSj3o8cBD*rEzVz2EVw56r5y-1SRLN53owJ7GcsMk-TqotURTM=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_png/yCOiaCWZEHHEfDsmngDh5ia2icJ3TWWm02eWJdo9NMvjelDFweuxIEdpTvzmnibmKrKq3zOPQy0GEtlxib7nnkVkmBA/0?wx_fmt=png","digest":"人为什么会做梦？关于梦的秘密你知道多少？","fileid":0,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"人为什么会做梦"},"comm_msg_info":{"content":"","datetime":1493438618,"fakeid":"2397027120","id":1000000244,"status":2,"type":49}},{"app_msg_ext_info":{"author":"Easy","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmPNux9-P7uIKe9te6gYaXi1b7JPR267S*VPE7Fnn0RMUExwHQ8XeJR0v9YC8vrXonL01lTz3jV7KZ-5DET8HQpI=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHHuJsRZNCzS9eHjTJXS9Zqibqj2AjBFRUI8Gq8Lqc0PYiboEd9bzqANzcHQYoODLSbvPCSy1hh3rq6g/0?wx_fmt=jpeg","digest":"人生不是一本任你随便翻阅的书，不可能迅速跳到结局，一切都得一步一步地走","fileid":500804295,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"人生如书，需慢慢品读"},"comm_msg_info":{"content":"","datetime":1493342098,"fakeid":"2397027120","id":1000000243,"status":2,"type":49}},{"app_msg_ext_info":{"author":"Easy","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmLHjvCePvb4LIXy8KeYViDwjglhkZw5yPhN8Jg7YphNhdiKtlFnO5HHU3ohK6ro0wGzp282LBVkUgRXv6PGKda8=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHH9dan8HmpNue1TCS8HKc2lBtqOXTwMjOh7VSpg8Eia8pTeWQ0yo2nFoxDOIclCicsPsVuymE7ExJTg/0?wx_fmt=jpeg","digest":"生命的温暖美好都因你","fileid":500804246,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"Love is..."},"comm_msg_info":{"content":"","datetime":1493258301,"fakeid":"2397027120","id":1000000242,"status":2,"type":49}},{"app_msg_ext_info":{"author":"马锦琨","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmHUBHMg9tPKuv5AJf2ITbaH6rCTYkNdPulyJpvG21eoF2FHuigH3lVylzS1SAG7jOmsLbSvTLCgsWRJ4aNDE1Qk=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHEIGgHFGl0ibWpMwuVw46Mmmc2TZzCo71iaVvcjOfUdnKXcVzBS24y2ibicBKqBU5NYdOMvvYoYIZS4rg/0?wx_fmt=jpeg","digest":"Let us live our own lives beyond our limits.","fileid":500804262,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"Living Beyond Limits"},"comm_msg_info":{"content":"","datetime":1493170825,"fakeid":"2397027120","id":1000000241,"status":2,"type":49}},{"app_msg_ext_info":{"author":"May","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmEi4-ifMoSZwcJNh*kvOTFtcJ-BGAzAMV*4ZymKG8qvU5Vfq38UIjpVntH2qTEGYt45RPx*wXEygkpfMkkFM7JY=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHH9dan8HmpNue1TCS8HKc2l0jAYkTragnX7Q7OKiaFfJJK2wNzWIltEoupEO0SOZxbsNeiciaa2e7MMQ/0?wx_fmt=jpeg","digest":"回顾四月二十二日的二十四省的公务员联考。无论你已经或未来即将成为他们中的一员，这一篇致辞你值得一看。奋斗吧，骚年！","fileid":500804243,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"潘基文秘书长2016年联合国公务员日致辞"},"comm_msg_info":{"content":"","datetime":1493096749,"fakeid":"2397027120","id":1000000240,"status":2,"type":49}},{"app_msg_ext_info":{"author":"岳媛","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmM*qVEJOzZa0DjlxuHUzQJgL7pqCN0eQCmNMYHzzc1ZbvZ8INW39mMEbnClzHEI2FFFc9-RD8U84tE43L-8oyi8=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHHWiaDvst0YAw8ySm9uVUUOgWeHXqDgTibicbiaLh2bYFjAEcMWld3MTCmzZYr7VtqNsH6LY194gT53Jg/0?wx_fmt=jpeg","digest":"有很多网红句子，很唯美也很暖心，这里小编整理出来了几个英语版的，希望你喜欢。","fileid":500804222,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"或励志或暖心或劝慰，总有一句你喜欢"},"comm_msg_info":{"content":"","datetime":1493000105,"fakeid":"2397027120","id":1000000239,"status":2,"type":49}},{"app_msg_ext_info":{"author":"PEONY","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmC07L19TQITkrhYJr2KZAxCHArK18n9USurVIhVgeKVdayq2UvcWQT3hMHzd9sYcAaCDFnqRr0MrjA7OdhjawNs=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHFs6aey89tBMQYIiagDwXdSWgLedD4ksvaUzNaXZx7FgDH9TEs7HhqJlfE5X2wNSaQ1NUA3Ld1n8Bg/0?wx_fmt=jpeg","digest":"笑一笑，没烦恼，嘻嘻","fileid":500804200,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"FOUR JOKES"},"comm_msg_info":{"content":"","datetime":1492911414,"fakeid":"2397027120","id":1000000238,"status":2,"type":49}},{"app_msg_ext_info":{"author":"Sherilyn Lu","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmEcLIufaD8L5UFy0Gr7Hwti2CHEYvDWLOUH65qjHnRxNiE3XelXy7uiVzDa-bhTMk0kQnJ7iB51qcIBNv3KioSM=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHHWiaDvst0YAw8ySm9uVUUOgb5I7DLulqRNDtf3A0xJlcyPfVuDhwVEE1OR5usAhYibibzkWEqvnGiaNA/0?wx_fmt=jpeg","digest":"专注对于每个人来说都是无比的重要，那么如何保持专注避免分心呢？","fileid":500804214,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"How can we control our mind from distraction?"},"comm_msg_info":{"content":"","datetime":1492823988,"fakeid":"2397027120","id":1000000237,"status":2,"type":49}},{"app_msg_ext_info":{"author":"马锦琨","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmPM2mTDLBL80iKXJij5osim0pFCarGhYEgyUJjfFlXah79MiSPUHi6qjgOvSi-VIuGZzcgs4mOIqmwgGOYZcx3Y=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHH7SqUz74MuSRTY08EMyQvrx1ztib0Xexw33mjgX0QCaeiaviaEIJfhPh71MictibIxqlt46TAVt7ib4BXg/0?wx_fmt=jpeg","digest":"The way was long, and wrapped in gloom did seem, As I urged on to seek my vanished dream.","fileid":500804031,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"路漫漫其修远兮，吾将上下而求索"},"comm_msg_info":{"content":"","datetime":1492741064,"fakeid":"2397027120","id":1000000236,"status":2,"type":49}},{"app_msg_ext_info":{"author":"岳媛","content":"","content_url":"/s?timestamp=1493476428&amp;src=3&amp;ver=1&amp;signature=-Pt8Gt3fPuiB-zBffrSiehOuE57bGnqgrWLJEdDwFdYihINOOsgKztmfbENI*lMX0tRNwS0KEf3WuJBN0NtPmDpAJ87LtcmtcJRiL5jO2lnbKbJl4A8k7bu5pBmrIHHot7zPh97LmSBNhQvrV4fHBjUe9JALKPc26oBle14ZZwQ=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/yCOiaCWZEHHFs6aey89tBMQYIiagDwXdSWlVsWNwNWk7iarpWnkZiaMsiazDC9QkfXm7ibZegQcRlTesrTuS2TavreUA/0","digest":"俄罗斯教师Asia和Landysh创办了一家英语培训机构Lingvistov，两个人创作出诙谐幽默、生动离奇的漫画寓教于乐。很快，他们的漫画不仅风靡教育界。更是在漫画界广为流传——因为他们的作品真心太赞了！","fileid":500804183,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"如果女人统治世界，就不会有战争，只是谁都不理谁"},"comm_msg_info":{"content":"","datetime":1492652898,"fakeid":"2397027120","id":1000000235,"status":2,"type":49}}]};
+        seajs.use("sougou/profile.js");
+</script>
+
+    </body>
+    <script nonce="" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+<!--tailTrap<body></body><head></head><html></html>-->
